@@ -1,0 +1,17 @@
+language: objective-c
+env:
+  matrix:
+    #- FORMULA_VERSION=
+    - FORMULA_VERSION=--HEAD
+before_install:
+  - brew update
+  - brew --env
+  - brew config
+install:
+  - mkdir -p $(brew --repo)/Library/Taps/fntsample
+  - ln -s $TRAVIS_BUILD_DIR $(brew --repo)/Library/Taps/fntsample/homebrew-fntsample
+script:
+  - brew install fntsample $FORMULA_VERSION --verbose
+  #- brew audit fntsample --strict
+  - brew test fntsample
+  - fntsample --help
