@@ -1,4 +1,5 @@
-language: objective-c
+os: osx
+language: generic
 env:
   matrix:
     #- FORMULA_VERSION=
