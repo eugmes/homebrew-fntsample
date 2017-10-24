@@ -6,6 +6,8 @@ class Fntsample < Formula
   version "5.0"
   sha256 "c3869cd8aace59cccd96054da146525f603a593b132656417ff08ef1cb8ec83c"
 
+  head "https://github.com/eugmes/fntsample.git"
+
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
   depends_on "gettext"
