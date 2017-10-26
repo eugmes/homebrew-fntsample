@@ -1,10 +1,8 @@
 class Fntsample < Formula
   desc "Program for making font samples"
   homepage "https://github.com/eugmes/fntsample"
-  # TODO: add actual release link
-  url "https://github.com/eugmes/fntsample/archive/master.tar.gz"
-  version "5.0"
-  sha256 "c3869cd8aace59cccd96054da146525f603a593b132656417ff08ef1cb8ec83c"
+  url "https://github.com/eugmes/fntsample/archive/release/5.0.tar.gz"
+  sha256 "3ef4aff6ee6e2b4d0139e3246efe6f71c43a53708be67b54fef3a2309017a673"
 
   head "https://github.com/eugmes/fntsample.git"
 
@@ -28,7 +26,7 @@ class Fntsample < Formula
     end
 
     mkdir "build" do
-      # setlocale is owerriden by libintl for some reaso without this hack... :/
+      # setlocale is overridden by libintl for some reason without this hack... :/
       system "cmake", "..", "-DUNICODE_BLOCKS=#{buildpath}/Blocks.txt", "-DCMAKE_C_FLAGS=-DGNULIB_defined_setlocale", *std_cmake_args
       system "make", "install"
     end

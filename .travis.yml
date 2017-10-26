@@ -1,18 +1,25 @@
 os: osx
+
 language: generic
+
 env:
   matrix:
-    #- FORMULA_VERSION=
+    - FORMULA_VERSION=
     - FORMULA_VERSION=--HEAD
+
+rvm: system
+
 before_install:
   - brew update
-  - brew --env
-  - brew config
+
 install:
-  - mkdir -p $(brew --repo)/Library/Taps/fntsample
-  - ln -s $TRAVIS_BUILD_DIR $(brew --repo)/Library/Taps/fntsample/homebrew-fntsample
+  - mkdir -p $(brew --repo)/Library/Taps/travis
+  - ln -s $TRAVIS_BUILD_DIR $(brew --repo)/Library/Taps/travis/homebrew-fntsample
+  - brew tap --repair
+  - brew install --only-dependencies $FORMULA_VERSION fntsample
+
 script:
-  - brew install fntsample $FORMULA_VERSION --verbose
-  #- brew audit fntsample --strict
+  - brew install $FORMULA_VERSION --verbose fntsample
+  - brew audit fntsample --strict
   - brew test fntsample
   - fntsample --help
