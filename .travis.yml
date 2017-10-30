@@ -7,6 +7,10 @@ env:
     - FORMULA_VERSION=
     - FORMULA_VERSION=--HEAD
 
+matrix:
+  allow_failures:
+  - env: FORMULA_VERSION=--HEAD
+
 rvm: system
 
 before_install:
