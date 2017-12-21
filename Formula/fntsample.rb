@@ -1,8 +1,8 @@
 class Fntsample < Formula
   desc "Program for making font samples"
   homepage "https://github.com/eugmes/fntsample"
-  url "https://github.com/eugmes/fntsample/archive/release/5.1.tar.gz"
-  sha256 "ab475c3617329a596d5a941ace5332e122ced98c3551032071be4407011a70e9"
+  url "https://github.com/eugmes/fntsample/archive/release/5.2.tar.gz"
+  sha256 "f5d6da0ea61235b050e3b3334349c2545786e18da23d4ef9ff0a0b4ca6e7f0cb"
 
   head "https://github.com/eugmes/fntsample.git"
 
