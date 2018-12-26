@@ -1,8 +1,8 @@
 class Fntsample < Formula
   desc "Program for making font samples"
   homepage "https://github.com/eugmes/fntsample"
-  url "https://github.com/eugmes/fntsample/archive/release/5.2.tar.gz"
-  sha256 "f5d6da0ea61235b050e3b3334349c2545786e18da23d4ef9ff0a0b4ca6e7f0cb"
+  url "https://github.com/eugmes/fntsample/archive/release/5.3.tar.gz"
+  sha256 "e4e8b50b0a5e984cfdaa32b7d133bd3bf0c62edb14f752f7df1190176023972b"
 
   head "https://github.com/eugmes/fntsample.git"
 
@@ -16,8 +16,8 @@ class Fntsample < Formula
   depends_on "glib"
 
   resource "unicode-blocks" do
-    url "https://unicode.org/Public/10.0.0/ucd/Blocks.txt"
-    sha256 "5ae1649a42ed8ae8cb885af79563f00a9ae17e602405a56ed8aca214da14eea7"
+    url "https://unicode.org/Public/11.0.0/ucd/Blocks.txt"
+    sha256 "0b457b66c788a97c8521e265f0b793d4ed911356d39eb61029f9cef8554cd052"
   end
 
   def install
