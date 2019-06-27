@@ -16,8 +16,8 @@ class Fntsample < Formula
   depends_on "glib"
 
   resource "unicode-blocks" do
-    url "https://unicode.org/Public/11.0.0/ucd/Blocks.txt"
-    sha256 "0b457b66c788a97c8521e265f0b793d4ed911356d39eb61029f9cef8554cd052"
+    url "https://unicode.org/Public/12.1.0/ucd/Blocks.txt"
+    sha256 "a28b205afe8625fffdb6544a5fe14cf02b91493d9900f07820fa2102a17548f7"
   end
 
   def install
