@@ -26,8 +26,7 @@ class Fntsample < Formula
     end
 
     mkdir "build" do
-      # setlocale is overridden by libintl for some reason without this hack... :/
-      system "cmake", "..", "-DUNICODE_BLOCKS=#{buildpath}/Blocks.txt", "-DCMAKE_C_FLAGS=-DGNULIB_defined_setlocale", *std_cmake_args
+      system "cmake", "..", "-DUNICODE_BLOCKS=#{buildpath}/Blocks.txt", *std_cmake_args
       system "make", "install"
     end
   end
