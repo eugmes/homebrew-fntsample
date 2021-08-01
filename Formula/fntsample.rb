@@ -25,10 +25,9 @@ class Fntsample < Formula
       buildpath.install "Blocks.txt"
     end
 
-    mkdir "build" do
-      system "cmake", "..", "-DUNICODE_BLOCKS=#{buildpath}/Blocks.txt", *std_cmake_args
-      system "make", "install"
-    end
+    system "cmake", "-Bbuild", "-DUNICODE_BLOCKS=#{buildpath}/Blocks.txt", *std_cmake_args
+    system "cmake", "--build", "build"
+    system "cmake", "--install", "build"
   end
 
   test do
