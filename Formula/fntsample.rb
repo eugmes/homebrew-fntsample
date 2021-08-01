@@ -16,8 +16,8 @@ class Fntsample < Formula
   depends_on "pango"
 
   resource "unicode-blocks" do
-    url "https://unicode.org/Public/12.1.0/ucd/Blocks.txt"
-    sha256 "a28b205afe8625fffdb6544a5fe14cf02b91493d9900f07820fa2102a17548f7"
+    url "https://unicode.org/Public/13.0.0/ucd/Blocks.txt"
+    sha256 "81a82b6a9fcf1a9c12f588d7a1decd73a9afdc4cac95b0eb7e576e7942d6c19f"
   end
 
   def install
