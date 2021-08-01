@@ -8,12 +8,12 @@ class Fntsample < Formula
 
   depends_on "cmake" => :build
   depends_on "pkg-config" => :build
-  depends_on "gettext"
   depends_on "cairo"
-  depends_on "pango"
   depends_on "fontconfig"
   depends_on "freetype"
+  depends_on "gettext"
   depends_on "glib"
+  depends_on "pango"
 
   resource "unicode-blocks" do
     url "https://unicode.org/Public/12.1.0/ucd/Blocks.txt"
